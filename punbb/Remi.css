@@ -152,11 +152,7 @@ B - GLOBAL STYLES
 	float: left;
 	width: 100%;
 	position: relative;
-	}
-
-.brd .main-content, .brd .gen-content {
-	border-style: solid;
-	border-width: 1px;
+    background: white url(images/monkey.png) bottom right no-repeat;
 	}
 
 .brd .gen-content {
@@ -219,8 +215,6 @@ B - GLOBAL STYLES
 	}
 
 .brd .main-head, .brd .main-foot {
-	border-style: solid;
-	border-width: 1px;
 	padding: 0 1.417em;
 	}
 
@@ -334,8 +328,6 @@ C - COMMON CONTENT TYPES (RE-USABLE FORMATS)
 	}
 
 .brd .ct-group {
-	border-style: solid;
-	border-width: 1px;
 	margin: 1.417em;
 	}
 
@@ -577,6 +569,12 @@ D - COMMON INTERFACE ELEMENTS
 	font-size: 1.167em;
 	text-decoration: none;
 	}
+
+#brd-navlinks form {
+    position:absolute;
+    top:110px;
+    right:.5em;
+}
 
 #brd-admod {
 	position:absolute;
