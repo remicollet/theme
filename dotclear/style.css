@@ -62,7 +62,7 @@ pre {
     width:auto;
     padding:0;
     margin: 0 0 19px;
-    background: #5782AC url(img/package.png) right 40px no-repeat;
+    background: #5782AC url(img/package.png) right 56px no-repeat;
     border-bottom: 4px #6db9f7 solid;
     height: 100px;
 }
@@ -136,7 +136,7 @@ pre {
 	color: #CAE4FC;
 	position: absolute;
 	top: 80px;
-	right: 5em;
+	right: 4em;
 	padding: 6px 0;
 }
 
