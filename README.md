@@ -1,4 +1,8 @@
 theme
 =====
 
-Theme for remi's blog, forum and repository
+Theme for remi's sites:
+- blog (dotclear 2)
+- forum (punbb)
+- repository (repoview)
+
