@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{tpl:EntryLang}}" lang="{{tpl:EntryLang}}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+  <meta name="ROBOTS" content="{{tpl:BlogMetaRobots}}" />
+  
+  <title>{{tpl:EntryTitle encode_html="1"}} - {{tpl:BlogName encode_html="1"}}</title>
+  <meta name="description" lang="{{tpl:EntryLang}}" content="{{tpl:EntryContent full="1" encode_html="1" remove_html="1" cut_string="180"}}" />
+  <meta name="copyright" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
+  <meta name="author" content="{{tpl:EntryAuthorCommonName encode_html="1"}}" />
+  <meta name="date" scheme="W3CDTF" content="{{tpl:EntryDate iso8601="1"}}" />
+  
+  <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+  <meta name="dc.title" content="{{tpl:EntryTitle encode_html="1"}}" />
+  <meta name="dc.description" lang="{{tpl:EntryLang}}" content="{{tpl:EntryContent full="1" encode_html="1" remove_html="1" cut_string="180"}}" />
+  <meta name="dc.creator" content="{{tpl:EntryAuthorCommonName encode_html="1"}}" />
+  <meta name="dc.language" content="{{tpl:EntryLang}}" />
+  <meta name="dc.publisher" content="{{tpl:BlogEditor encode_html="1"}}" />
+  <meta name="dc.rights" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
+  <meta name="dc.date" scheme="W3CDTF" content="{{tpl:EntryDate iso8601="1"}}" />
+  <meta name="dc.type" content="text" />
+  <meta name="dc.format" content="text/html" />
+  
+  <link rel="top" href="{{tpl:BlogURL}}" title="{{tpl:lang Home}}" />
+  <link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+  
+  <tpl:EntryNext><link rel="next" href="{{tpl:EntryURL}}"
+  title="{{tpl:EntryTitle encode_html="1"}}" /></tpl:EntryNext>
+  
+  <tpl:EntryPrevious><link rel="previous" href="{{tpl:EntryURL}}"
+  title="{{tpl:EntryTitle encode_html="1"}}" /></tpl:EntryPrevious>
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{tpl:BlogFeedURL type="atom"}}" />
+  
+  {{tpl:include src="_head.html"}}
+  
+  <script type="text/javascript" src="{{tpl:BlogThemeURL}}/../default/js/post.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var post_remember_str = '{{tpl:lang Remember me on this blog}}';
+  //]]>
+  </script>
+</head>
+
+<body class="dc-post">
+<div id="page">
+{{tpl:EntryPingData}}
+
+{{tpl:include src="_top.html"}}
+
+<div id="wrapper">
+
+<div id="main">
+  <div id="content">
+  
+  <p id="navlinks">
+  <tpl:EntryPrevious><a href="{{tpl:EntryURL}}"
+  title="{{tpl:EntryTitle encode_html="1"}}" class="prev">&#171; ({{tpl:EntryLang}}) {{tpl:EntryTitle encode_html="1"
+  cut_string="50"}}</a></tpl:EntryPrevious>
+  <tpl:EntryNext> <span>-</span> <a href="{{tpl:EntryURL}}"
+  title="{{tpl:EntryTitle encode_html="1"}}" class="next">({{tpl:EntryLang}}) {{tpl:EntryTitle encode_html="1"
+  cut_string="50"}} &#187;</a></tpl:EntryNext>
+  </p>
+  
+  <div id="p{{tpl:EntryID}}" class="post">
+    <h2 class="post-title"><img src=/images/{{tpl:EntryLang}}.gif /> {{tpl:EntryTitle encode_html="1"}}
+	<!-- Place this tag where you want the +1 button to render -->
+	<div style="display: inline-block; margin-left: 1em"><div class="g-plusone"  data-size="medium">+</div></div>
+    </h2>
+    
+    <p class="post-info">{{tpl:lang By}} {{tpl:EntryAuthorLink}}
+    {{tpl:lang on}} {{tpl:EntryDate}}, {{tpl:EntryTime}}
+    <tpl:EntryIf has_category="1">
+    - <a href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a>
+    </tpl:EntryIf>
+    - <a href="{{tpl:EntryURL}}">{{tpl:lang Permalink}}</a>
+    </p>
+    
+    <tpl:EntryMetaData>
+    <tpl:MetaDataHeader><ul class="post-tags"></tpl:MetaDataHeader>
+    <li><a href="{{tpl:MetaURL}}">{{tpl:MetaID}}</a></li>
+    <tpl:MetaDataFooter></ul></tpl:MetaDataFooter>
+    </tpl:EntryMetaData>
+    
+    <!-- # --BEHAVIOR-- publicEntryBeforeContent -->
+    {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
+    
+    <!-- # Entry with an excerpt -->
+    <tpl:EntryIf extended="1">
+      <div class="post-excerpt">{{tpl:EntryExcerpt}}</div>
+    </tpl:EntryIf>
+    
+    <div class="post-content">{{tpl:EntryContent}}</div>
+    
+    <!-- # --BEHAVIOR-- publicEntryAfterContent -->
+    {{tpl:SysBehavior behavior="publicEntryAfterContent"}}
+  </div>
+  
+  <!-- # Attachments -->
+  <tpl:Attachments>
+    <tpl:AttachmentsHeader>
+      <div id="attachments">
+      <h3>{{tpl:lang Attachments}}</h3>
+      <ul>
+    </tpl:AttachmentsHeader>
+      <li class="{{tpl:AttachmentType}}">
+        <tpl:AttachmentIf is_mp3="1">
+          {{tpl:include src="_mp3_player.html"/}} - 
+        </tpl:AttachmentIf>
+        <tpl:AttachmentIf is_flv="1">
+	     {{tpl:include src="_flv_player.html"/}}
+	   </tpl:AttachmentIf>
+	   <tpl:AttachmentIf is_flv="0">
+	   	<a href="{{tpl:AttachmentURL}}"
+		title="{{tpl:AttachmentFileName}} ({{tpl:AttachmentSize}})">{{tpl:AttachmentTitle}}</a>
+        </tpl:AttachmentIf>
+      </li>
+    <tpl:AttachmentsFooter>
+      </ul>
+      </div>
+    </tpl:AttachmentsFooter>
+  </tpl:Attachments>
+ 
+  <!-- # Comments -->
+  <tpl:EntryIf show_comments="1">
+    <tpl:Comments>
+    <tpl:CommentsHeader>
+      <div id="comments">
+        <h3>{{tpl:lang Comments}}</h3>
+      <dl>
+    </tpl:CommentsHeader>
+      <dt id="c{{tpl:CommentID}}" class="{{tpl:CommentIfMe}} {{tpl:CommentIfOdd}} {{tpl:CommentIfFirst}}"><a
+      href="#c{{tpl:CommentID}}" class="comment-number">{{tpl:CommentOrderNumber}}.</a>
+      {{tpl:lang On}} {{tpl:CommentDate}}, {{tpl:CommentTime}}
+      {{tpl:lang by}} {{tpl:CommentAuthorLink}}</dt>
+      
+      <dd class="{{tpl:CommentIfMe}} {{tpl:CommentIfOdd}} {{tpl:CommentIfFirst}}">
+      <!-- # --BEHAVIOR-- publicCommentBeforeContent -->
+      {{tpl:SysBehavior behavior="publicCommentBeforeContent"}}
+      
+      {{tpl:CommentContent}}
+      
+      <!-- # --BEHAVIOR-- publicCommentAfterContent -->
+      {{tpl:SysBehavior behavior="publicCommentAfterContent"}}
+      </dd>
+    <tpl:CommentsFooter>
+      </dl>
+      </div>
+    </tpl:CommentsFooter>
+    </tpl:Comments>
+  </tpl:EntryIf>
+  
+  <tpl:EntryIf comments_active="1">    
+    <tpl:SysIfFormError>
+      <p class="error" id="pr">{{tpl:SysFormError}}</p>
+    </tpl:SysIfFormError>
+    
+    <tpl:SysIfCommentPublished>
+      <p class="message" id="pr">{{tpl:lang Your comment has been published.}}</p>
+    </tpl:SysIfCommentPublished>
+    
+    <tpl:SysIfCommentPending>
+      <p class="message" id="pr">{{tpl:lang Your comment has been submitted and
+      will be reviewed for publication.}}</p>
+    </tpl:SysIfCommentPending>
+    
+    <!-- # Comment form -->
+    <form action="{{tpl:EntryURL}}#pr" method="post" id="comment-form">
+      <tpl:IfCommentPreview>
+        <div id="pr">
+          <h3>{{tpl:lang Your comment}}</h3>
+          <dl>
+            <dd class="comment-preview">{{tpl:CommentPreviewContent}}</dd>
+          </dl>
+          <p class="buttons"><input type="submit" class="submit" value="{{tpl:lang send}}" /></p>
+        </div>
+      </tpl:IfCommentPreview>
+      
+      <h3>{{tpl:lang Add a comment}}</h3>
+      <fieldset>
+        <!-- # --BEHAVIOR-- publicCommentFormBeforeContent -->
+        {{tpl:SysBehavior behavior="publicCommentFormBeforeContent"}}
+        
+        <p class="field"><label for="c_name">{{tpl:lang Name or nickname}}&nbsp;:</label>
+        <input name="c_name" id="c_name" type="text" size="30" maxlength="255"
+        value="{{tpl:CommentPreviewName encode_html="1"}}" />
+        </p>
+        
+        <p class="field"><label for="c_mail">{{tpl:lang Email address}}&nbsp;:</label>
+        <input name="c_mail" id="c_mail" type="text" size="30" maxlength="255"
+        value="{{tpl:CommentPreviewEmail encode_html="1"}}" />
+        </p>
+        
+        <p class="field"><label for="c_site">{{tpl:lang Website}}
+        ({{tpl:lang optional}})&nbsp;:</label>
+        <input name="c_site" id="c_site" type="text" size="30" maxlength="255"
+        value="{{tpl:CommentPreviewSite encode_html="1"}}" />
+        </p>
+        
+        <p style="display:none"><input name="f_mail" type="text" size="30"
+        maxlength="255" value="" /></p>
+        
+        <p class="field"><label for="c_content">{{tpl:lang Comment}}&nbsp;:</label>
+        <textarea name="c_content" id="c_content" cols="35"
+        rows="7">{{tpl:CommentPreviewContent raw="1" encode_html="1"}}</textarea>
+        </p>
+        <p class="form-help">{{tpl:lang HTML code is displayed as text and web addresses are
+        automatically converted.}}</p>
+        
+        <!-- # --BEHAVIOR-- publicCommentFormAfterContent -->
+        {{tpl:SysBehavior behavior="publicCommentFormAfterContent"}}
+      </fieldset>
+      
+      <fieldset>
+        <p class="buttons"><input type="submit" class="preview" name="preview" value="{{tpl:lang preview}}" />
+        <tpl:IfCommentPreview><input type="submit" class="submit" value="{{tpl:lang send}}" /></tpl:IfCommentPreview></p>
+      </fieldset>
+    </form>
+  </tpl:EntryIf>
+  
+  <!-- # Trackbacks -->
+  <tpl:EntryIf show_pings="1">
+    <div id="pings">
+    <h3>{{tpl:lang They posted on the same topic}}</h3>
+    <tpl:Pings>
+      <tpl:PingsHeader>
+      <dl>
+      </tpl:PingsHeader>
+        <dt id="c{{tpl:PingID}}" class="{{tpl:PingIfOdd}} {{tpl:PingIfFirst}}"><a href="#c{{tpl:PingID}}"
+        class="ping-number">{{tpl:PingOrderNumber}}.</a>
+        {{tpl:lang On}} {{tpl:PingDate}}, {{tpl:PingTime}}
+        {{tpl:lang by}} {{tpl:PingBlogName encode_html="1"}}</dt>
+        
+        <dd class="{{tpl:PingIfOdd}} {{tpl:PingIfFirst}}">
+        <!-- # --BEHAVIOR-- publicPingBeforeContent -->
+        {{tpl:SysBehavior behavior="publicPingBeforeContent"}}
+        
+        <p><a href="{{tpl:PingAuthorURL}}"
+        {{tpl:PingNoFollow}}>{{tpl:PingTitle encode_html="1"}}</a></p>
+        {{tpl:PingContent}}
+        
+        <!-- # --BEHAVIOR-- publicPingAfterContent -->
+        {{tpl:SysBehavior behavior="publicPingAfterContent"}}
+        </dd>
+      <tpl:PingsFooter>
+      </dl>
+      </tpl:PingsFooter>
+    </tpl:Pings>
+    </div>
+  </tpl:EntryIf>
+  
+  <tpl:EntryIf pings_active="1">
+    <p id="ping-url">{{tpl:lang Trackback URL}}&nbsp;: {{tpl:EntryPingLink}}</p>
+  </tpl:EntryIf>
+  
+  <tpl:EntryIf operator="or" comments_active="1" pings_active="1">
+  <p id="comments-feed"><a class="feed" href="{{tpl:BlogFeedURL type="atom"}}/comments/{{tpl:EntryID}}"
+  title="{{tpl:lang This post's comments Atom feed}}">{{tpl:lang This post's comments feed}}</a></p>
+  </tpl:EntryIf>
+  </div>
+</div> <!-- End #main -->
+
+<div id="sidebar">
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input align='right' type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img align='right' alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+  <div id="blognav">
+    {{tpl:Widgets type="nav"}}
+  </div> <!-- End #blognav -->
+  
+  <div id="blogextra">
+    {{tpl:Widgets type="extra"}}
+  </div> <!-- End #blogextra -->
+</div>
+
+</div> <!-- End #wrapper -->
+
+{{tpl:include src="_footer.html"}}
+</div> <!-- End #page -->
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</body>
+</html>

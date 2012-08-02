@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{tpl:BlogLanguage}}" lang="{{tpl:BlogLanguage}}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+  <meta name="ROBOTS" content="{{tpl:BlogMetaRobots}}" />
+  
+  <title>{{tpl:lang Tag}} - {{tpl:MetaID}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf></title>
+  <meta name="copyright" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
+  <meta name="author" content="{{tpl:BlogEditor encode_html="1"}}" />
+  <meta name="date" scheme="W3CDTF" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
+  
+  <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
+  <meta name="dc.title" lang="{{tpl:BlogLanguage}}" content="{{tpl:lang Tag}} - {{tpl:MetaID}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf>" />
+  <meta name="dc.language" content="{{tpl:BlogLanguage}}" />
+  <meta name="dc.publisher" content="{{tpl:BlogEditor encode_html="1"}}" />
+  <meta name="dc.rights" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
+  <meta name="dc.date" scheme="W3CDTF" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
+  <meta name="dc.type" content="text" />
+  <meta name="dc.format" content="text/html" />
+  
+  <link rel="top" href="{{tpl:BlogURL}}" title="{{tpl:lang Home}}" />
+  <link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+  
+  <tpl:Entries no_content="1">
+    <tpl:EntriesHeader>
+      <tpl:Pagination>
+        <tpl:PaginationIf end="0">
+        <link rel="previous" title="{{tpl:lang previous entries}}" href="{{tpl:PaginationURL offset="1"}}" />
+        </tpl:PaginationIf>
+        
+        <tpl:PaginationIf start="0">
+        <link rel="next" title="{{tpl:lang next entries}}" href="{{tpl:PaginationURL offset="-1"}}" />
+        </tpl:PaginationIf>
+      </tpl:Pagination>
+    </tpl:EntriesHeader>
+    
+    <link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" />
+  </tpl:Entries>
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{tpl:TagFeedURL type="atom"}}" />
+  <link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
+  
+  {{tpl:include src="_head.html"}}
+</head>
+
+<body class="dc-tag">
+<div id="page">
+{{tpl:include src="_top.html"}}
+
+<div id="wrapper">
+
+<div id="main">
+  <div id="content">
+  
+  <div id="content-info">
+    <h2>{{tpl:lang Tag}} - {{tpl:MetaID}}</h2>
+    
+    <p><a type="application/atom+xml" href="{{tpl:TagFeedURL type="atom"}}"
+    title="{{tpl:lang This tag's entries Atom feed}}" class="feed">{{tpl:lang Entries feed}}</a>
+    
+    <tpl:SysIf operator="or" comments_active="1" pings_active="1">
+    - <a type="application/atom+xml" href="{{tpl:TagFeedURL type="atom"}}/comments"
+    title="{{tpl:lang This tag's comments Atom feed}}" class="feed">{{tpl:lang Comments feed}}</a>
+    </tpl:SysIf>
+    </p>
+  </div>
+  
+  <tpl:Entries>
+    <div id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}}" lang="{{tpl:EntryLang}}" xml:lang="{{tpl:EntryLang}}">
+    <!-- # New day date -->
+    <tpl:DateHeader><p class="day-date">{{tpl:EntryDate}}</p></tpl:DateHeader>
+    
+    <h2 class="post-title"><a
+    href="{{tpl:EntryURL}}"><img src=/images/{{tpl:EntryLang}}.gif /> {{tpl:EntryTitle encode_html="1"}}</a></h2>
+    
+    <p class="post-info">{{tpl:lang By}} {{tpl:EntryAuthorLink}}
+    {{tpl:lang on}} {{tpl:EntryDate}}, {{tpl:EntryTime}}
+    <tpl:EntryIf has_category="1">
+    - <a href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a>
+    </tpl:EntryIf>
+    </p>
+    
+    <tpl:EntryMetaData>
+    <tpl:MetaDataHeader><ul class="post-tags"></tpl:MetaDataHeader>
+    <li><a href="{{tpl:MetaURL}}">{{tpl:MetaID}}</a></li>
+    <tpl:MetaDataFooter></ul></tpl:MetaDataFooter>
+    </tpl:EntryMetaData>
+    
+    <!-- # --BEHAVIOR-- publicEntryBeforeContent -->
+    {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
+    
+    <!-- # Entry with an excerpt -->
+    <tpl:EntryIf extended="1">
+      <div class="post-content">{{tpl:EntryExcerpt}}</div>
+      <p class="read-it"><a href="{{tpl:EntryURL}}"
+      title="{{tpl:lang Continue reading}} {{tpl:EntryTitle encode_html="1"}}">{{tpl:lang Continue
+      reading}}</a>...</p>
+    </tpl:EntryIf>
+    
+    <!-- # Entry without excerpt -->
+    <tpl:EntryIf extended="0">
+      <div class="post-content">{{tpl:EntryContent}}</div>
+    </tpl:EntryIf>
+    
+    <!-- # --BEHAVIOR-- publicEntryAfterContent -->
+    {{tpl:SysBehavior behavior="publicEntryAfterContent"}}
+    
+    <!-- # Number of comments, trackbacks and attachments -->
+    <tpl:EntryIf operator="or" show_comments="1" show_pings="1" has_attachment="1">
+      <p class="post-info-co">
+    </tpl:EntryIf>
+    <tpl:EntryIf show_comments="1">
+      <a href="{{tpl:EntryURL}}#comments" class="comment_count">{{tpl:EntryCommentCount}}</a>
+    </tpl:EntryIf>
+    <tpl:EntryIf show_pings="1">
+      <a href="{{tpl:EntryURL}}#pings" class="ping_count">{{tpl:EntryPingCount}}</a></tpl:EntryIf>
+    <tpl:EntryIf has_attachment="1">
+      <a href="{{tpl:EntryURL}}#attachments" class="attach_count">{{tpl:EntryAttachmentCount}}</a></tpl:EntryIf>
+    <tpl:EntryIf operator="or" show_comments="1" show_pings="1" has_attachment="1">
+      </p>
+    </tpl:EntryIf>
+    </div>
+    
+    <tpl:EntriesFooter>
+      <tpl:Pagination>
+        <p class="pagination"><tpl:PaginationIf end="0"><a href="{{tpl:PaginationURL offset="+1"}}" class="prev">&#171;
+        {{tpl:lang previous entries}}</a> - </tpl:PaginationIf>
+        {{tpl:lang page}} {{tpl:PaginationCurrent}} {{tpl:lang of}} {{tpl:PaginationCounter}}
+        <tpl:PaginationIf start="0"> - <a href="{{tpl:PaginationURL offset="-1"}}" class="next">{{tpl:lang next entries}}
+        &#187;</a></tpl:PaginationIf></p>
+      </tpl:Pagination>
+    </tpl:EntriesFooter>
+  </tpl:Entries>
+  </div>
+</div> <!-- End #main -->
+
+<div id="sidebar">
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input align='right' type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img align='right' alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+  <div id="blognav">
+    {{tpl:Widgets type="nav"}}
+  </div> <!-- End #blognav -->
+  
+  <div id="blogextra">
+    {{tpl:Widgets type="extra"}}
+  </div> <!-- End #blogextra -->
+</div>
+
+</div> <!-- End #wrapper -->
+
+{{tpl:include src="_footer.html"}}
+</div> <!-- End #page -->
+</body>
+</html>
