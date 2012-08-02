@@ -1,0 +1,309 @@
+/**
+ * RepoView « Remi's Garfield » theme
+ * Adapted for repoview by Johan Cwiklinski - http://ulysses.fr
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background: #CDCDCD;
+	font: 0.7em Arial,sans-serif;
+}
+
+/* Common styles
+-------------------------------------------------------- */
+
+ul, ul li {
+	list-style: none;
+}
+
+a:link, a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+pre {
+	overflow: auto;
+	height: auto;
+	font-size:1.2em;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/* Page
+-------------------------------------------------------- */
+
+#page {
+	background-color:white;
+	margin:0 auto;
+	position:relative;
+	width:99%;
+}
+
+#top {
+	width:auto;
+	margin: 0 auto;
+	background: transparent url(images/top.jpg) repeat-x left bottom;
+	padding:0 0 33px;
+}
+
+#top h1 {
+	font-size: 3em;
+	text-align: center;
+	background: transparent url(images/top_gar.jpg) bottom left no-repeat;
+	height:100px;
+	margin:0;
+}
+
+#top h1 span{
+	display:block;
+	text-align:center;
+	padding-top:30px;
+	bottom:.2em;
+}
+
+#top a:link, #top a:visited, #top a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#prelude {
+	position: absolute;
+	top: 0;
+	right: 18px;
+	width: 370px;
+	padding: 6px 0 6px;
+	color: #CAE4FC;
+	text-align: center;
+	background: transparent url(images/top_prelude.jpg) bottom left no-repeat;
+}
+
+#prelude a:link, #prelude a:visited {
+ 	padding: 0 0.5em; 
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #CAE4FC;
+	text-decoration: none;
+}
+
+#prelude a:hover {
+	text-decoration: underline;
+}
+
+.levbar {
+	float:left;
+	width: 11em;
+	height: 100%;
+	border-right: 2px dotted gray; 
+	border-bottom: 2px dotted gray;
+}
+
+.main {
+	margin-left: 13em; 
+}
+
+#wrapper {
+	width:auto;
+	margin: 0 auto 10px;
+	position:relative;
+}
+
+#main {
+	float:left;
+	display:inline;
+	width:100%;
+}
+
+#content{
+	margin-left:1em;
+	margin-right:25em;
+}
+
+#sidebar {
+	width: 23em;
+	float:left;
+	margin:0 0 0 -24em;
+}
+
+#sidebar h2 {
+	margin: 0 0 10px;
+	padding: 5px 8px;
+	background: #F5F5F5;
+	border: 1px solid #CDCDCD;
+	border-width: 1px 0;
+	color: #005D99;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#sidebar a:link, #sidebar a:visited {
+	text-decoration: none;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+}
+
+#sidebar ul {
+	padding: 0 0 4px;
+}
+
+#sidebar li {
+	padding: 3px 4px 3px 20px;
+	background: transparent url(images/sidebar_li.png) no-repeat 10px 7px;
+}
+
+#sidebar p {
+	padding: 0 0 4px 10px;
+}
+
+#footer {
+	clear: both;
+	width:100%;
+	padding: 0 0 14px;
+	background: transparent url(images/footer.png) repeat-x center bottom;
+}
+
+#footer p {
+	margin: 0 auto;
+	padding: 6px 16px 6px 0;
+	background: #606666;
+	color: #FFF;
+	text-align: right;
+	font-weight: bold;
+}
+
+#footer p a:link, #footer p a:visited {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+#footer p a:hover {
+	text-decoration: none;
+}
+
+#content h3,
+#content h2,
+.pagetitle{
+	clear: left;
+	margin: 0 0 10px 0;
+	padding: 5px 10px;
+	background: #F5F5F5;
+	border: 1px solid #CDCDCD;
+	border-width: 1px 0;
+	color: #5E9E14;
+	font-weight: bold;
+}
+#content h2,
+.pagetitle{
+	color: #005D99;
+	font-size:1.2em;
+}
+
+.pkglist{
+	margin-bottom: 1.5em;
+	font-size: 1.2em;
+}
+
+.pkglist li {
+	padding: .1em 0 .1em 10px;
+	background: transparent url(images/li.png) no-repeat 0 5px;
+}
+
+.nav {
+	position:absolute;
+	right:1em;
+	text-align:right;
+	top:75px;
+	padding:6px 0;
+	color:#CAE4FC;
+}
+.letterlist a {
+	padding: 0 .2em;
+	color:#CAE4FC;
+	text-decoration:none;
+}
+.letterlist a:hover{
+	text-decoration:underline;
+}
+.repoview {
+	text-decoration: none;
+	color: gray;
+	border-bottom: 1px dotted gray;
+}
+
+dl{
+	margin-bottom:.5em;
+}
+
+#pkg_main{
+	float:left;
+	width:20em;
+	margin-right:2%;
+}
+
+dt{
+	font-weight: bold;
+}
+
+td{
+	vertical-align:top;
+}
+
+td pre{
+	margin: 0 0 .2em .2em;
+}
+
+.nowrap{
+	white-space: nowrap
+}
+
+td.filesize{
+	text-align:right;
+	padding:0 .5em;
+}
+
+#vxhtml, #vcss{
+	text-indent:90px;
+	width:80px;
+	height:15px;
+	float:left;
+	overflow:hidden;
+	margin-left:1em;
+	margin-top:.5em;
+}
+
+#vxhtml{
+	background:transparent url(images/w3c-xhtml10.png) 0 0 no-repeat;
+}
+#vcss{
+	background:transparent url(images/w3c-css20.png) 0 0 no-repeat;
+}
+
+/** Seems unused */
+.nactive {
+	border-bottom: 1px dotted blue;
+	color: blue;
+	text-decoration: none;
+}
+.ninactive {
+	color: gray; 
+}
+.field  {
+	text-align: right;
+}
