@@ -59,12 +59,12 @@ pre {
 -------------------------------------------------------- */
 
 #top {
-	width:auto;
-	margin: 0 auto;
-    background-image: url(img/package.png), url(img/top.jpg);
-    background-position: right 40px, left bottom;
-    background-repeat: no-repeat, repeat-x;
-	padding:0 0 19px;
+    width:auto;
+    padding:0;
+    margin: 0 0 19px;
+    background: #5782AC url(img/package.png) right 40px no-repeat;
+    border-bottom: 4px #6db9f7 solid;
+    height: 100px;
 }
 
 #top h1 {
@@ -78,7 +78,6 @@ pre {
 	display:block;
 	text-align:center;
 	padding-top: 30px;
-	bottom:.2em;
 }
 
 #top a:link, #top a:visited, #top a:hover {
