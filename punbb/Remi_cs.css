@@ -83,16 +83,12 @@ body {
 	border-bottom-color: #DDE4EB;
 	}
 
-.brd .post {
-	background: #EDF1F5;
-	}
-
 .brd .posthead, .brd .postbody, .brd .post-options {
-	background: #f9f9f9;
+	background: rgba(255,255,255,.8);
 	}
 
 .brd .posthead .hn {
-	background: #F1F1F1;
+	background: rgba(86, 130, 171, 0.1);
 	}
 
 .brd .posthead .post-title small {
@@ -365,7 +361,7 @@ body {
 
 .brd .main-head a:link, .brd .main-head a:visited,
 .brd .main-foot .options a:link, .brd .main-foot .options a:visited {
-	color: #ccc;
+	color: #333;
 	}
 
 .brd .main-head a:hover, .brd .main-head a:active, .brd .main-head a:focus,

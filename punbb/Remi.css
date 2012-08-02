@@ -810,7 +810,7 @@ D - COMMON INTERFACE ELEMENTS
 .brd .content-options, .brd .ct-options {
 	float: right;
 	margin-top: -2.7em;
-	padding: 0.5em 1.417em;
+	padding: 0 1.417em;
 	position: relative;
 	}
 
@@ -1420,6 +1420,8 @@ F - MAIN CONTENT - FORMS
 	}
 
 .brd .txt-set textarea {
+    border: 1px solid #CDCDCD;
+    background: transparent;
 	width: 95%;
 	}
 
