@@ -52,7 +52,7 @@ pre {
 	position: relative;
 	width: 99%;
 	margin: 0 auto;
-	background:white url(img/monkey.png) 100% 94% no-repeat;
+	background:white url(img/monkey.png) bottom right no-repeat;
 }
 
 /* Header
@@ -905,7 +905,8 @@ a.feed { }
 
 #footer {
 	clear: both;
-	width:100%;
+	width:99%;
+    margin: 0 auto;
 	padding: 0 0 14px;
 	background: transparent url(img/footer.png) repeat-x center bottom;
 }
