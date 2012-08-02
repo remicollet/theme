@@ -49,7 +49,7 @@ pre {
 -------------------------------------------------------- */
 
 #page {
-	background-color:white;
+	background:white url(images/monkey.png) bottom right no-repeat;
 	margin:0 auto;
 	position:relative;
 	width:99%;
@@ -57,15 +57,17 @@ pre {
 
 #top {
 	width:auto;
-	margin: 0 auto;
-	background: transparent url(images/top.jpg) repeat-x left bottom;
-	padding:0 0 33px;
+	margin: 0 0 19px;
+    background: #5782AC url(images/package.png) right 56px no-repeat;
+    padding:0;
+    border-bottom: 4px #6db9f7 solid;
+    height: 100px;
 }
 
 #top h1 {
 	font-size: 3em;
 	text-align: center;
-	background: transparent url(images/top_gar.jpg) bottom left no-repeat;
+	background: transparent url(images/top_monkey.png) bottom left no-repeat;
 	height:100px;
 	margin:0;
 }
@@ -90,14 +92,16 @@ pre {
 	padding: 6px 0 6px;
 	color: #CAE4FC;
 	text-align: center;
-	background: transparent url(images/top_prelude.jpg) bottom left no-repeat;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 0 0 6px 6px;
+
 }
 
 #prelude a:link, #prelude a:visited {
  	padding: 0 0.5em; 
 	font-size: 1.1em;
 	font-weight: bold;
-	color: #CAE4FC;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -144,8 +148,6 @@ pre {
 	margin: 0 0 10px;
 	padding: 5px 8px;
 	background: #F5F5F5;
-	border: 1px solid #CDCDCD;
-	border-width: 1px 0;
 	color: #005D99;
 	font-size: 1em;
 	font-weight: bold;
@@ -174,7 +176,8 @@ pre {
 
 #footer {
 	clear: both;
-	width:100%;
+	width:99%;
+    margin: 0 auto;
 	padding: 0 0 14px;
 	background: transparent url(images/footer.png) repeat-x center bottom;
 }
@@ -182,7 +185,7 @@ pre {
 #footer p {
 	margin: 0 auto;
 	padding: 6px 16px 6px 0;
-	background: #606666;
+	background: #5682ab;
 	color: #FFF;
 	text-align: right;
 	font-weight: bold;
@@ -204,8 +207,6 @@ pre {
 	margin: 0 0 10px 0;
 	padding: 5px 10px;
 	background: #F5F5F5;
-	border: 1px solid #CDCDCD;
-	border-width: 1px 0;
 	color: #5E9E14;
 	font-weight: bold;
 }
@@ -227,9 +228,9 @@ pre {
 
 .nav {
 	position:absolute;
-	right:1em;
+	right:5em;
 	text-align:right;
-	top:75px;
+	top:80px;
 	padding:6px 0;
 	color:#CAE4FC;
 }

@@ -89,19 +89,20 @@ def ymd(stamp):
 </div></form>
 			</div>
 		</div>
-		<div id="footer">
-			<ul id="w3c">
-				<li>
-					<a id="vxhtml" href="http://validator.w3.org/check/referer">XHTML 1.1 valide</a>
-				</li>
-				<li>
-					<a id="vcss" href="http://jigsaw.w3.org/css-validator/check/referer">CSS 2.0 valide</a>
-				</li>
-			</ul>
-			<p>
-				Listing created by <a href="http://mricon.com/trac/wiki/Repoview" class="repoview" py:content="'Repoview-%s' % repo_data['my_version']"/> | Designed for <a href="http://blog.famillecoollet.com">Remi</a> by <a href="http://blog.ulysses.fr">Trashy</a>
-			</p>
-		</div>
+        <hr style="clear: both;"/>
+	</div>
+	<div id="footer">
+		<ul id="w3c">
+			<li>
+				<a id="vxhtml" href="http://validator.w3.org/check/referer">XHTML 1.1 valide</a>
+			</li>
+			<li>
+				<a id="vcss" href="http://jigsaw.w3.org/css-validator/check/referer">CSS 2.0 valide</a>
+			</li>
+		</ul>
+		<p>
+			Listing created by <a href="http://mricon.com/trac/wiki/Repoview" class="repoview" py:content="'Repoview-%s' % repo_data['my_version']"/> | Designed for <a href="http://blog.famillecoollet.com">Remi</a> by <a href="http://blog.ulysses.fr">Trashy</a>
+		</p>
 	</div>
 </body>
 </html>
