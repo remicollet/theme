@@ -52,7 +52,7 @@ pre {
 	position: relative;
 	width: 99%;
 	margin: 0 auto;
-	background-color:white;
+	background:white url(img/monkey.png) 100% 94% no-repeat;
 }
 
 /* Header
@@ -61,14 +61,16 @@ pre {
 #top {
 	width:auto;
 	margin: 0 auto;
-	background: transparent url(img/top.jpg) repeat-x left bottom;
+    background-image: url(img/package.png), url(img/top.jpg);
+    background-position: right 40px, left bottom;
+    background-repeat: no-repeat, repeat-x;
 	padding:0 0 19px;
 }
 
 #top h1 {
 	font-size: 3em;
 	text-align: center;
-	background: transparent url(img/top_gar.jpg) bottom left no-repeat;
+	background: transparent url(img/top_monkey.png) bottom left no-repeat;
 	height:100px;
 }
 
@@ -95,7 +97,8 @@ pre {
 	padding: 6px 0 6px;
 	color: #CAE4FC;
 	text-align: center;
-	background: transparent url(img/top_prelude.jpg) bottom left no-repeat;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 0 0 6px 6px;
 }
 
 #prelude a {
@@ -107,6 +110,10 @@ pre {
 	font-weight: bold;
 	color: #CAE4FC;
 	text-decoration: none;
+}
+
+#prelude a:link, #prelude a:visited {
+    color: #fff;
 }
 
 #navlink a:link, #navlink a:visited{
@@ -129,12 +136,10 @@ pre {
 #navlink {
 	color: #CAE4FC;
 	position: absolute;
-	top: 75px;
-	right: 1em;
+	top: 80px;
+	right: 5em;
 	padding: 6px 0;
 }
-
-	
 
 /* Wrapper
 -------------------------------------------------------- */
@@ -173,8 +178,7 @@ pre {
 	margin: 0 0 10px;
 	padding: 5px 8px;
 	background: #F5F5F5;
-	border: 1px solid #CDCDCD;
-	border-width: 1px 0;
+	border: none;
 	color: #005D99;
 	font-size: 1em;
 	font-weight: bold;
@@ -243,8 +247,7 @@ pre {
 	margin: 0 0 20px;
 	padding: 5px 5px 5px 8px;
 	background: #F5F5F5;
-	border: 1px solid #CDCDCD;
-	border-width: 1px 0;
+	border: none;
 	color: #005D99;
 	font-size: 0.9em;
 	font-weight: bold;
@@ -391,8 +394,7 @@ pre {
 	margin: 0 0 10px 0;
 	padding: 5px 10px;
 	background: #F5F5F5;
-	border: 1px solid #CDCDCD;
-	border-width: 1px 0;
+	border: none;
 	color: #5E9E14;
 	font-weight: bold;
 	text-align: right;
@@ -803,7 +805,6 @@ a.feed { }
 	margin: 0 0 20px;
 	padding: 5px;
 	background: #F5F5F5;
-	border: 1px solid #CDCDCD;
 	border-width: 1px 0;
 	text-align: center;
 	color: #5E9E14;
@@ -871,6 +872,7 @@ a.feed { }
 	border: 1px solid #CDCDCD;
 	font: 1em Arial,sans-serif;
 	color: #005D99;
+    background: transparent;
 }
 
 #comment-form input#c_remember {
@@ -912,7 +914,7 @@ a.feed { }
 #footer p {
 	margin: 0 auto;
 	padding: 6px 16px 6px 0;
-	background: #606666;
+	background: #5682ab;
 	color: #FFF;
 	text-align: right;
 	font-weight: bold;
