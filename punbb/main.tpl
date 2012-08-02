@@ -54,13 +54,13 @@
 
 <div class="hr"><hr /></div>
 
+<!-- forum_debug -->
+    <hr style="clear:both;"/>
+</div>
 <div id="brd-about" class="gen-content">
 	<!-- forum_about -->
 </div>
 
-<!-- forum_debug -->
-
-</div>
 </div>
 
 </body>

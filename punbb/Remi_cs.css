@@ -2,9 +2,13 @@
 ----------------------------------------------------------------*/
 
 body {
-	background: #fff;
+	background: #CDCDCD;
 	color: #333;
 	}
+
+#brd-index {
+    background: white url(images/monkey.png) bottom right no-repeat;
+}
 
 .brd a:link, .brd a:visited {
 	color: #00579C;
@@ -32,7 +36,6 @@ body {
 	}
 
 .brd .gen-content, .brd .main-content {
-	background: #fbfbfb;
 	border-color: #DFE6ED;
 	border-bottom-color: #CBD1D8;
 	}
@@ -230,7 +233,8 @@ body {
 ----------------------------------------------------------------*/
 
 #brd-navlinks ul#remi_navlinks {
-	background: transparent url(images/top_prelude.jpg) bottom left no-repeat;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 0 0 6px 6px;
 	border: none;
 	position:absolute;
 	top: 0;
@@ -322,11 +326,9 @@ body {
 ----------------------------------------------------------------*/
 
 #brd-head {
-	background:transparent url(images/top.jpg) repeat-x left bottom;
-	/*background: #296FA5;
-	color: #ddd;
-	border-color: #296FA5;*/
-	}
+    background: #5782AC url(images/package.png) right 56px no-repeat;
+    border-bottom: 4px #6db9f7 solid;
+}
 
 #brd-head a, #brd-head a:link, #brd-head a:visited {
 	color: #fff;

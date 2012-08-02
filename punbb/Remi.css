@@ -506,14 +506,13 @@ D - COMMON INTERFACE ELEMENTS
 -------------------------------------------------------------*/
 
 #brd-head {
-	padding:0 0 33px;
+	padding:0;
 	border:none;
-	/*padding-bottom: 0.75em;
-	padding-top: 1em;*/
+    height: 100px;
 	}
 
 #brd-title {
-	background:transparent url(images/top_gar.jpg) no-repeat left bottom;
+	background: transparent url(images/top_monkey.png) bottom left no-repeat;
 	font-size: 3em;
 	text-align: center;
 	height:50px;
@@ -545,7 +544,8 @@ D - COMMON INTERFACE ELEMENTS
 -------------------------------------------------------------*/
 
 #brd-navlinks {
-	border:none; 
+	border:none;
+    margin-top: 2.1em;
 }
 
 #brd-navlinks ul {
@@ -635,8 +635,8 @@ D - COMMON INTERFACE ELEMENTS
 	/*float: left;
 	margin-right:2em;*/
 	position:absolute;
-	top:75px;
-	left:80px;
+	top:80px;
+	left:125px;
 	color:#CAE4FC;
 	}
 
@@ -644,8 +644,8 @@ D - COMMON INTERFACE ELEMENTS
 	text-align: right;
 /* 	float: right; */
 	position:absolute;
-	top:75px;
-	right:1em;
+	top:80px;
+	right:4em;
 	}
 
 #brd-visit #visit-links a {
@@ -774,8 +774,13 @@ D - COMMON INTERFACE ELEMENTS
 	}
 
 #brd-about #copyright {
+	margin: 0 auto;
+	padding: 16px 16px 6px 0;
+	background: #5682ab;
+	color: #FFF;
 	text-align: right;
-	margin: 0;
+	font-weight: bold;
+
 	}
 
 #querytime {
@@ -1967,4 +1972,19 @@ H - MAIN CONTENT - ODDMENTS
 }
 #brd-pun_tags a:hover {
 	text-decoration:underline;
+}
+
+#brd-about {
+	background: transparent url(images/footer.png) repeat-x center bottom;
+    margin: 0 auto;
+    border: none;
+	padding: 0 0 14px;
+}
+#brd-about p a:link, #brd-about p a:visited {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+#brd-about p a:hover {
+	text-decoration: none;
 }
