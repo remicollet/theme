@@ -6,7 +6,7 @@ Theme for Remi's web sites:
 - http://forums.famillecollet.com/ (punbb 1.4.x)
 - http://rpms.famillecollet.com/   (repoview)
 
-Designed for Remi by Trashy Licensed under CC-BY-ND [1] except the various "monkey" images which are (c)Bruno Bellamy [2]
+Designed for Remi by Johan Cwiklinski (aka trashy) [1] Licensed under CC-BY-ND [2] except the various "monkey" images which are (c)Bruno Bellamy [3].
 
 * [1] http://blog.ulysses.fr/
 * [2] http://creativecommons.org/licenses/by-nd/3.0/
