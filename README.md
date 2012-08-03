@@ -7,3 +7,9 @@ Theme for Remi's web sites:
 - http://rpms.famillecollet.com/   (repoview)
 
 Designed for Remi by Trashy http://blog.ulysses.fr/
+Licensed under CC-BY-ND [1] except the various "monkey"
+images which are (c)Bruno Bellamy [2]
+
+[1] http://creativecommons.org/licenses/by-nd/3.0/
+[2] http://bellaminettes.com/contact/legal.php
+
