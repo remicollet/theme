@@ -364,11 +364,6 @@ body {
 	color: #333;
 	}
 
-.brd .main-head a:hover, .brd .main-head a:active, .brd .main-head a:focus,
-.brd .main-foot .options a:hover, .brd .main-foot .options a:active, .brd .main-foot .options a:focus {
-	color: #fff;
-	}
-
 .brd th {
 	background: rgba(86, 130, 171, 0.2)
 	}
